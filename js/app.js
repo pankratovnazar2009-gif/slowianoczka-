@@ -391,11 +391,6 @@
       </section>
 
       <section class="section">
-        <div class="section-head"><div><h2 class="h2">${t('appPrices')}</h2><div class="small muted">${t('appPricesDesc')}</div></div><a class="link" href="#/shop?app=1">${t('seeAll')}${icon('chev', 'ico-sm')}</a></div>
-        <div class="rail">${deals.map((d) => productCard(d.p)).join('')}</div>
-      </section>
-
-      <section class="section">
         <div class="wreath-card">
           <div class="wreath">${wreathSvg(S.wreath.days)}</div>
           <div class="wreath-body">
@@ -404,6 +399,11 @@
             <button class="btn btn-sm ${canPick ? 'btn-gold' : 'btn-ghost'}" data-act="pick" ${canPick ? '' : 'disabled'}>${icon('flower', 'ico-sm')}${canPick ? `${t('pick')} +${S.wreath.days === 6 ? 50 : 5}` : t('picked')}</button>
           </div>
         </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><div><h2 class="h2">${t('appPrices')}</h2><div class="small muted">${t('appPricesDesc')}</div></div><a class="link" href="#/shop?app=1">${t('seeAll')}${icon('chev', 'ico-sm')}</a></div>
+        <div class="rail">${deals.map((d) => productCard(d.p)).join('')}</div>
       </section>
 
       <section class="section">
